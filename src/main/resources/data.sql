@@ -1,0 +1,25 @@
+-- Datos de prueba de clientes y productos
+INSERT INTO CLIENTE (NOMBRE, APELLIDO, DNI) VALUES
+('CARLOS', 'RAMIREZ', '12345678901'),
+('LUCÍA', 'FERNANDEZ', '23456789012'),
+('MARIO', 'GONZALEZ', '34567890123');
+
+INSERT INTO PRODUCTO (DESCRIPCION, CODIGO, STOCK, PRICE) VALUES
+('LAPTOP DELL INSPIRON', 'DL-INSP-001', 12, 649999.99),
+('MOUSE LOGITECH', 'LG-MSE-002', 51, 24999.99),
+('TECLADO MECÁNICO REDRAGON', 'RD-KBD-003', 28, 89999.99),
+('MONITOR SAMSUNG 24"', 'SM-MON-004', 17, 219999.99);
+
+-- Datos de prueba de las facturas
+INSERT INTO FACTURA (CLIENT_ID, CREADO_EN, TOTAL) VALUES
+(1, '2024-04-01 10:30:00', 674999.98),
+(2, '2024-04-03 15:00:00', 114999.98);
+(3, '2024-04-05 18:50:00', 649999.99);
+
+-- Detalles de prueba de las facturas
+INSERT INTO FACTURA_DETALLE (FACTURA_ID, PRODUCTO_ID, CANTIDAD, PRECIO) VALUES
+(1, 1, 1, 649999.99),  -- Una laptop para Carlos
+(1, 2, 1, 24999.99),    -- Un mouse para Carlos
+(2, 3, 2, 89999.99),    -- Un teclado para Lucia
+(2, 2, 1, 24999.99);    -- Un mouse para Lucía
+(3, 4, 1, 649999.99);    -- Un monitor para Mario
